@@ -17,7 +17,7 @@
         <br/>
         <% if @posts != nil %>
           <p>The weather is:<b class="weather"> <%= @posts.first %></b></p>
-          <%= @posts.drop(1).each do |clothing, pic| %>
+          <% @posts.drop(1).each do |clothing, pic| %>
             <div class="item">
               <label><%= clothing %></label><br/>
               <%= image_tag(pic, size: 120) %><br/>

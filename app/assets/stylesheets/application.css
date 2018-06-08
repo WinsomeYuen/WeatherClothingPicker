@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html,body,.container-fluid {
+    height:100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    display:table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row {
+    height: 100%;
+    display: table-row;
+}
+
+.row .no-float {
+    display: table-cell;
+    float: none;
+}
+
+.col-md-3 {
+    background: pink;
+}
+.col-md-9 {
+    background: yellow;
+    text-align: center;
+}
+
+.title{
+    padding: 10px;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+}
+
+.item{
+    display: inline-block;
+    margin: 10px;
+}
+
+div label {
+    display: block;
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.textfield {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    border-bottom: 2px solid #ff6ca0;
+    background-color: yellow;
+}
+
+.weather{
+    color: #ff6ca0;
+}

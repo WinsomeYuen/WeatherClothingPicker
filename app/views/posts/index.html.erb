@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 no-float">
+      <h1 class="title">Weather Clothing Picker</h1>
+      <%= image_tag("Logo/logoSunset.png", class: "img-fluid mx-auto d-block") %>
+      <br/>
+      <p>Welcome to the application that allows you to search up a location anywhere in the world
+      and it will tell you the general weather with some recommendations of what to wear for this weather.</p>
+    </div>
+    <div class="col-md-9 no-float">
+      <h2 class="title">Search Location</h2>
+      <div class="form">
+        <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Location", class: "textfield" %>
+          <%= submit_tag "Search", class: "btn btn-outline-info mb-2" %>
+        <% end %>
+        <br/>
+        <% if @posts != nil %>
+          <p>The weather is:<b class="weather"> <%= @posts.first %></b></p>
+          <%= @posts.drop(1).each do |clothing, pic| %>
+            <div class="item">
+              <label><%= clothing %></label><br/>
+              <%= image_tag(pic, size: 120) %><br/>
+            </div>
+          <% end %>
+        <% else %>
+          <p>Search Results.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

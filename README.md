@@ -1,7 +1,7 @@
 # Weather Clothing Picker
 
 Very basic to run:
-* Install repo and unzip
+* Download repo and unzip
 * run <b>bundler install</b> in cmd
 * Then it should run straight away when you type <b>Rails Server</b> in cmd
 
